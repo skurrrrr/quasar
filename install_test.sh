@@ -13,7 +13,3 @@ echo "{\"this machine\": \"$this_machine\", \"API\": \"milfrogs.com\", \"IP\": \
 
 # Give the file read permission to everyone
 chmod 755 /usr/local/bin/quasar/quasar_config.json
-
-# Add cron jobs
-(sudo crontab -l; echo "@reboot sudo python3 /usr/local/bin/quasar/reboot.py") | crontab -
-(sudo crontab -l; echo "*/1 * * * * sudo python3 /usr/local/bin/quasar/check_ip.py") | crontab -
