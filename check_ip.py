@@ -21,8 +21,10 @@ if public_ip != config['IP']:
     with open('/usr/local/bin/quasar/quasar_config.json', 'w') as f:
         f.write(json_string)
 
+    # Get the webhook URL from config
+    webhook_url = config['webhook']
+
     # Create the webhook data
-    webhook_url = 'https://discord.com/api/webhooks/1275206757173432352/8KFB-HjXDjPxhQ8RDAIcXGqJ13gc7F8_7p9vitIpVn-IA8m3_ZEiJxZo2kyVgvWygpzW'
     data = {
         "username": config['this machine'],
         "content": f"IP Address changed to {public_ip}"
